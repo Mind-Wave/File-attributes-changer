@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace File_attributes_changer
 {
@@ -20,6 +22,22 @@ namespace File_attributes_changer
         {
             labelSelectText = "File: ";
             labelAttributesText = "File attributes: ";
+
+            var attributes = Enum.GetValues(typeof(FileAttributes));
+
+            List<string> stringAttributes = new List<string>();
+
+            foreach (object item in attributes)
+            {
+                stringAttributes.Add(item.ToString());
+            }
+
+            comboBoxAttributes.Items.AddRange(stringAttributes.ToArray());
+
+            if (comboBoxAttributes.Items.Count > 0)
+            {
+                comboBoxAttributes.SelectedIndex = 0;
+            }
         }
 
         private void buttonSelectFile_Click(object sender, EventArgs e)
@@ -49,6 +67,9 @@ namespace File_attributes_changer
             }
         }
 
-        
+        private void buttonSetAttribute_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
