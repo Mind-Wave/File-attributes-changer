@@ -32,8 +32,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonSetAttribute = new System.Windows.Forms.Button();
+            this.buttonAddAttribute = new System.Windows.Forms.Button();
             this.comboBoxAttributes = new System.Windows.Forms.ComboBox();
+            this.buttonOneAttribute = new System.Windows.Forms.Button();
             this.buttonSelectFile = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelSelectedFile = new System.Windows.Forms.Label();
@@ -76,29 +77,31 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.buttonSetAttribute, 1, 0);
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.buttonAddAttribute, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.comboBoxAttributes, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonOneAttribute, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(281, 33);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // buttonSetAttribute
+            // buttonAddAttribute
             // 
-            this.buttonSetAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSetAttribute.Location = new System.Drawing.Point(143, 3);
-            this.buttonSetAttribute.Name = "buttonSetAttribute";
-            this.buttonSetAttribute.Size = new System.Drawing.Size(135, 27);
-            this.buttonSetAttribute.TabIndex = 0;
-            this.buttonSetAttribute.Text = "Set attribute";
-            this.buttonSetAttribute.UseVisualStyleBackColor = true;
-            this.buttonSetAttribute.Click += new System.EventHandler(this.buttonSetAttribute_Click);
+            this.buttonAddAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAddAttribute.Location = new System.Drawing.Point(96, 3);
+            this.buttonAddAttribute.Name = "buttonAddAttribute";
+            this.buttonAddAttribute.Size = new System.Drawing.Size(87, 27);
+            this.buttonAddAttribute.TabIndex = 1;
+            this.buttonAddAttribute.Text = "Add attribute";
+            this.buttonAddAttribute.UseVisualStyleBackColor = true;
+            this.buttonAddAttribute.Click += new System.EventHandler(this.buttonAddAttribute_Click);
             // 
             // comboBoxAttributes
             // 
@@ -106,8 +109,19 @@
             this.comboBoxAttributes.FormattingEnabled = true;
             this.comboBoxAttributes.Location = new System.Drawing.Point(3, 3);
             this.comboBoxAttributes.Name = "comboBoxAttributes";
-            this.comboBoxAttributes.Size = new System.Drawing.Size(134, 21);
+            this.comboBoxAttributes.Size = new System.Drawing.Size(87, 21);
             this.comboBoxAttributes.TabIndex = 1;
+            // 
+            // buttonOneAttribute
+            // 
+            this.buttonOneAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonOneAttribute.Location = new System.Drawing.Point(189, 3);
+            this.buttonOneAttribute.Name = "buttonOneAttribute";
+            this.buttonOneAttribute.Size = new System.Drawing.Size(89, 27);
+            this.buttonOneAttribute.TabIndex = 2;
+            this.buttonOneAttribute.Text = "Set attribute";
+            this.buttonOneAttribute.UseVisualStyleBackColor = true;
+            this.buttonOneAttribute.Click += new System.EventHandler(this.buttonOneAttribute_Click);
             // 
             // buttonSelectFile
             // 
@@ -115,7 +129,7 @@
             this.buttonSelectFile.Location = new System.Drawing.Point(3, 42);
             this.buttonSelectFile.Name = "buttonSelectFile";
             this.buttonSelectFile.Size = new System.Drawing.Size(281, 33);
-            this.buttonSelectFile.TabIndex = 1;
+            this.buttonSelectFile.TabIndex = 0;
             this.buttonSelectFile.Text = "SELECT FILE";
             this.buttonSelectFile.UseVisualStyleBackColor = true;
             this.buttonSelectFile.Click += new System.EventHandler(this.buttonSelectFile_Click);
@@ -181,12 +195,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button buttonSetAttribute;
+        private System.Windows.Forms.Button buttonAddAttribute;
         private System.Windows.Forms.ComboBox comboBoxAttributes;
         private System.Windows.Forms.Button buttonSelectFile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label labelSelectedFile;
         private System.Windows.Forms.Label labelAttributes;
+        private System.Windows.Forms.Button buttonOneAttribute;
     }
 }
 

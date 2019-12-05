@@ -47,7 +47,30 @@ namespace File_attributes_changer
             }
         }
 
-        private void buttonSetAttribute_Click(object sender, EventArgs e)
+        private void buttonAddAttribute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxAttributes.Items.Count == 0)
+                {
+                    throw new Exception("No attributes in list");
+                }
+
+                if (string.IsNullOrEmpty(selectedFilePath))
+                {
+                    throw new Exception("File not selected");
+                }
+
+
+                updateFileInfo(selectedFilePath);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, @"ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonOneAttribute_Click(object sender, EventArgs e)
         {
             try
             {
