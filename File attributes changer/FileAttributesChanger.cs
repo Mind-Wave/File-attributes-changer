@@ -61,6 +61,13 @@ namespace File_attributes_changer
                     throw new Exception("File not selected");
                 }
 
+                FileAttributes attributes = File.GetAttributes(selectedFilePath);
+
+                FileAttributes selectedAttribute = (FileAttributes)comboBoxAttributes.SelectedItem;
+
+                FileAttributes addedAttributes = attributes | selectedAttribute;
+
+                File.SetAttributes(selectedFilePath, addedAttributes);
 
                 updateFileInfo(selectedFilePath);
             }
